@@ -1,0 +1,73 @@
+version: '2'
+services:
+  eurekaserver:
+     image:   johncarnell/tmx-eurekasvr:${BUILD_NAME}
+     mem_limit: 1073741824
+     ports:
+         - "8761:8761"
+  configserver:
+      image: johncarnell/tmx-confsvr:${BUILD_NAME}
+      mem_limit: 1000000000
+      ports:
+         - "8888:8888"
+      environment:
+         EUREKASERVER_PORT: 8761
+         EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+  zuulserver:
+      image: johncarnell/tmx-zuulsvr:${BUILD_NAME}
+      mem_limit: 1073741824
+      ports:
+        - "5555:5555"
+      environment:
+        PROFILE: "default"
+        SERVER_PORT: "5555"
+        CONFIGSERVER_PORT: 8888
+        EUREKASERVER_PORT: 8761
+        CONFIGSERVER_URI: "http://configserver:8888"
+        EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+  licensingservice:
+      image: johncarnell/tmx-licensing-service:${BUILD_NAME}
+      mem_limit: 1073741824
+      ports:
+        - "8080:8080"
+      environment:
+        PROFILE: "default"
+        SERVER_PORT:       "8080"
+        ES_PORT:           9200
+        DATABASE_PORT:     5432
+        CONFIGSERVER_PORT: 8888
+        EUREKASERVER_PORT: 8761
+        AUTHSERVER_PORT:   8091
+        CONFIGSERVER_URI: "http://configserver:8888"
+        EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+        AUTHSERVER_URI:   "http://authenticationservice:8901/user"
+  organizationservice:
+      image: johncarnell/tmx-organization-service:${BUILD_NAME}
+      mem_limit: 1073741824
+      ports:
+        - "8085:8085"
+      environment:
+        PROFILE: "default"
+        SERVER_PORT:      "8085"
+        ES_PORT:           9200
+        DATABASE_PORT:     5432
+        CONFIGSERVER_PORT: 8888
+        EUREKASERVER_PORT: 8761
+        AUTHSERVER_PORT:   8091
+        CONFIGSERVER_URI: "http://configserver:8888"
+        EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+        AUTHSERVER_URI:   "http://authenticationservice:8901/user"
+  authenticationservice:
+      image: johncarnell/tmx-authentication-service:${BUILD_NAME}
+      mem_limit: 1073741824
+      ports:
+        - "8901:8901"
+      environment:
+        PROFILE: "default"
+        SERVER_PORT: "8901"
+        ES_PORT:           9200
+        DATABASE_PORT:     5432
+        CONFIGSERVER_PORT: 8888
+        EUREKASERVER_PORT: 8761
+        CONFIGSERVER_URI: "http://configserver:8888"
+        EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
