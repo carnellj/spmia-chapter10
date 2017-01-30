@@ -1,13 +1,12 @@
-#Step 3 - Setting up the core project configuration
 language: java
 jdk:
-  - oraclejdk8
+- oraclejdk8
 cache:
   directories:
-    - "$HOME/.m2"
+  - "$HOME/.m2"
 sudo: required
 services:
-  - docker
+- docker
 notifications:
   email:
   - carnell28@gmail.com
@@ -15,25 +14,23 @@ notifications:
   on_failure: always
 branches:
   only:
-    - master
+  - master
 env:
   global:
-  - secure: IAs5WrQIYjH0rpO6W37wbLAixjMB7kr7DBAeWhjeZFwOkUMJbfuHNCTmJ4wudzRl2xEvocFaeAVjfPI5eq9O9HAJDnSaO4llLN4hBMnWW2KFYFPURJO8duyCDlluPn4edwqE5V4MUupHCCj63ib/cgS8WnXgaquRqy41jXvSagXi/ziMgYQqCYrmg8tCuzDLPImHuXZw0EdoLJ6O7UmHuTffBCR1WKjMO5u4Jgj9UZJ9yQaUO2xEsexxauj0cFhGFai9tVPf+l2XVkrSNT2q6EX8SPU5cGKzHWi7Swv5RG/MWY7kpARBVxsL1LdF3LxH90RZ4zkGAJseslv1bnXuXKU17znXoerX/9NHTq+sXNKgvsH5qD8g24z1UTalwST1kREfO0qbTXuWFF5y89Fv6au7mKo59GSqmrupFrtRbw25Fn+aKnU89mVJxCl3/dxwgn/DKGFc1v4froHdhsb3LqQUZfmQLcULMElGyCSkh47YBtRNXDVkd6G2hN8ZT2ewYl3xsG7sLqKbZf+KrMfJRWjdCgx1d7kSB2YTwoPfYsBBiNvvbYoltRT8kGDqYJEvxEEiPeZcbinySk0O9d5W8ktssaoip9O82fRz6IlV7Ef05dKpRUaGJGhwesGC65Ip4xn0GE1Wj0wIZLScneSTlkHUaYSKqC4dDmdGfnEYXOA=
-  - secure: HRSq78OtWtfkKXZSq1Oue/wV07TZIU+0mYPn1DctCnovsUWcpPJydQqzPVhoU11x7oBScjiMO9Tv1+D2pGvyWLPuXqJSSqbhUPKGrYdX5lZvqeNnhu80XJO1hJC7/f0s1W/6jvm375VD2mlowkHSxi+k5FJG6fEx7DOmxdk23xc5T7l5qpW1RiEqA5t3bJz7bJh6TRXrt4wXyP583h/D/djjICpHCDhiCnT+E7xWKZW9gAoMCqOlEc9q5wTS95U107uAjRJ4HMvHjtjUuXTUkUUwm7/VhB7wn4js8L6JSoFF6ir3c3yCdYu9Dbs9op11nRqBpkKH0dhOcydEJCKg0xOmJMLPT+vrAgzQIwkBBXigtoahMZXWwxu020dMbYKf3DJLrM59rZuHkAdJbsi/1jA/5f3fY4Ou8lea6J3i5KEzvMb853sWtID0RW6IClbUvIYnxzsM01EbBdZ079s7U95ZaUnE0clgv9GWw+2FLii9MNV4CjIdiV0fkabMCc8WmLVayq4B37Dy+7dfnmOYtM2UkjeP0z0GXlA1ApFyTUuFIjzMql7zkATg/TaetdNYvyVBmM9CpNEZ2TGTBv6jNwVmHZN+VTwZUsDCXMwConIuKXQ0u5TRSDJG4W8XYAttCxn+1KOfUCOxmAOkyTT+v4jSw4FLChH8t9p48Y7IhUc=
-  - secure: m4IkvlGXq6LBzSEHJbabS/0cfCD1IRcMjfgp8BaN+wFY+NbVpMTvp+aibbRty5EQl8Zv/MonV1e9v7yZ7+LQLSPD+nwkr3i1c0f6eoe4uMvfa0D2hMQur1eJW8DMF0KYtjI1G7GYc7vxlmrDYa4H+DGlAhS0K2rurx6v2HFoHcK5ljLypyawpeMl07nL3NWaYHa2pi95UrKI5mThvEWfVAjDBejlolRknWEUWxLPYlJ9YilrYBhrnySUv/bPTyC15oyYKh2gmM4qzq6B1v6fJSL1NIN7oH4zj1UovWzknyx2oUnKt2sfIpXxUbtel07+S3553h3EotFEsS1U26TVnuCR8hOaiG6zomtZ7QXpalToS+EHuJ0JKXscQAqRFM/AouTHPKmkgw0ZaBUUamAXW8JTT7is5N5d6m0a+KVEYDm/EpU+oLwF1V+qMEJAa9IG4vu9nruaG+/9nCCfxMglFXwhW9k3jrqoC371L3CGX/2VLVh3CRx8OvoFQ4gOIv+dprXpBI2da6Ef7Ln8KHHiODOsz6GiCUxYp7Sjr9jS6pSMNlx64aBomIoJg7poQztYBTtgVxjNdDgEktP2Q9ZE88AnLu1/XZEpIh6W4wpnDgiV2ym1z/nX1Zv3u/JshVya0XcvMemb62QFPUq9/sta5IMoUdxdW1w99UyB6J8Sz3c=
-  - secure: rSZhPQ5WFeIBo1xi/cVihYhaaExBQ2fH6obadCABSIaHEIZcwgGUJethX47EfRBvSnfgIYZciuF519i18DZ9o3p3lclA7Fk7Md/qP2VIlH8PJy2yeoAI95AFSCpTc1bOmadx7x+KPZWX2mNHuRPT5l2VCOzSI1KigeKbi/KnqlX0NseTEZnMpg6gzhhVBbtWxOkspAmJOvQsYeVe8st+xUbuPmqif5riRdleAWUsQ4is+SZc8a4b2Qvc3P5BM2Oc/yYzNmIIleAKAmmwMAmMepRUJMJiMLtkZH8W+OdLWCc/Y5wUnHWJzbhbprS8BQ9u8Feujx3pG2leXmDhOXSNAMJCN0OFp0kC+HG1HHyYAnfiZFPL7ctk6sPDDHGM2K/3zIpv9bfEJWSApJ0pyYnKRaj5k9zBcNxesVT+zE+e0XUKNTLLIjv8gZoCu16543CfUSt2FPjumPPmgP9wEv6rDYaH84ChLYxwjxIjkVAiZ4v/W1gVznYYgAwrIDT+SrUJmnoRe4/Nmz3CoQyfXW0bTlAH0tfrBNs8fSH/8DVdrNz9ijShpaHBdmh10zveIR8kEiOU1ErTMU3ut3yQ5elLyZoFA89PXUmBWH58t0nWpI8xmc8gyLFxYc+3yg4qjj5G6zfomCYNrIhkTlly2RZTO0waTsgzzxrwmfchwPGHvXI=
-  - secure: dGyTJS4vw9Iw0NAHddooek7IU6wDlGgybviW44Ts/Z4kzSqNJ/rhKeblvpFYVJFIoRgmYkxwjEpXw6MXyKfoaMd2/t0B6N6R6qttstzpwLv+KtXpvHLpT0nS+O2ESktBSUtfut+Izpd7rUKLMSA4QgdTrElUD5V2GJTOszqeHH9XdZM4ws40NFTqL8ECVQPo+GLPDzsirS7FjCVBtacV8Kv0Fv/pAYA+Teg1fFqCLpCbCQwXzv34ml7DWOIxA0+vwZThrQDv7Z+zBjX5IKl7R/udLwP7DII6wBAGo9e2F+xm/yufeRAJXKP8X7uE2x1boYLiYp+Li+A3Eb5VbPsDtQ8edw3jXeZax9IexRHgqZQGE2WdCdaxVGILsPbUirv0IAjb/hxJ8/ZGF7+TYqBA5t1vxIJWTXkkuKiI++qH9LaA4FQ9gNxd5xi8WefEDLjasw9qvlsO9o7cYtOb1MyC0+H9wleseBrbSx7i7hWHYv39sflTcnCdEPDGgx/EzRyCSY5mkBlT2Q/NjnUl8eAk8e0X2KcY1GswtaBRd3ZR3uUqa2AcWVnj3PKDSVCsd7Y8mlnBWE4kisGruIK01HMALf1PY9djDOgiO55IBQdYP+Kx94z00jpKfZ5QAk888q8HuhFDtVZhS+5UaJydZzdSyDw/oRvfO/EzOI3x+ZfpS/o=
-#Step 4 - Setting up the third-party command line tools that will be used in the build process.  Also setting up some dynamic variables
+  - secure: E6WqUsvNBaznI6xiaDLzBVLr7pKGqR3uGOjBXqT5m6snZnQmH7awu364aHXgE5wte7kODIbtIhWOBFUxZqdFT6UUF/sTGrBEfVbK7H4cFNconiSoY9TJU6lll4MK/KMNHKCew4WfCDCTDefCuN4fVbMmb+hKHTGYNMo5IyzYFrpqitdt1Q3uNbu0A25tyAKluZ5eTMbO5ZG76B2eX5Pvge6h3Y0qEsCY+1vP7xcSBIEJYVw+PMfvp7DDgwkj4oAPu0wEelaxLfeCUDfkPRBAnCauyKfg1Ida1/aIieBd2xVkv+Ypm0lYnoMV/xlvuoZY6so4W7Ii3SJC7LGYVDtvcDSUY8yZVhNx8Lyf0G+PdjqoJcAkR670hwpDYAw6oe7neC4nRu+P60Z9MORe7rFSVDum0N/HZgAzDIOroZg4o00lqlH9GC/2OahLPxiq3cCl8i6lRi63m2aKHr/DNaPQ3312zoHA3G8TZYS1ZvfSLIEfCAOI4Ywz5N2CrE1vXbJX4nA/q1+R5tUwNKfB/KGC9hqHzuosBA5O1lQYJcTPLOMEH3qH1deen3T4KkjAWDhxZE93ovfmXUmZz3kMtkWXr3yEwwWM6L49QMPF0Iv+/eXOWnjYexJ0YU5hljgG96mBNhiLURRg/xDI6BsJLKBEb2fNGfp8k1crTyv7dVvjYvo=
+  - secure: j97NlFyjfMEA1CDh1uPXpksrp7udS57/0DTIsIXRLUNXvn203Skm9DvUqp1wNhFSfBAhSM0xE7rsWiy23goVL8z3+pxW4DQxzi9THzB+Z76/eHr6gGfboYAI7xqxxweC89y52B3h9y3E+smFRW4HZeS4LC+nw/tXo0VQh58fbE4Ydqx0JLXEJYx0PpJ1eYEfa3U0D9OlB+c4p+KJcer3ufvnAtdOPpsnjySlzzd9cg/3H2Kgt3P2Axvk7x+nFAYlE2Ov02aO8n00MhXI1R9GkImN1wl8XCcXS7gZOXeR1Xd6WPyY5wHOiOUPZe5+NnTMNLWIWm9rfY3Tj7YGvq41JoWbP348PELaqzAb4bn6zYhjR7IMZLmBroQ3ndDNk9Ugu0TOufQIXZOEQvhcdPW80T4sVhJBprxMRpji3wp2nfk5AZ6uaW1ppbeKTCbXSNGUMY8syzcuzakNOHsw19yJDJ2bRl/6VJEV7xaSKmUYFCkGBsuUeB7deQWYzV04oC2RU4ZMXaz/l0oUy02HigPfWpuHcfuxl1rKQpkgi1HysiecQpPX+qGxnPuIkhTYqRYFTnNtaEFHgnnWdaAAHqj+7BsLECTnu83PB8eIOXu1urBHxrxFgG5Ghjv8dN14GhXTiXWmNIp0C9AwLIT4KHrUPT+x5F2Dqtb07Qmlnm1/XD0=
+  - secure: km8ABs12DHC1juDJ1W6W1ekvo8E1pNxyySep2rFWsB1BLWQdK6vWNUi0EqcQVibRa/WEmSlHFZCfplkzK5ON3c1UbNMnqHkh3wNArDr8AcnaI7xRwGFxVIJtPGZVfQtma06QeXyE54pggjHMF9i9gGrNxyBIduEtX9ao1NIaUudnQiDPXAxMf9S5yrQarWnUUoNaJGU6KhY703LI5P7+znRn+GQ170J+WQdxloivfKqnrVASCHMQbkxi+KBuXhxCsRHcw/NkE9oKGlbG50UdR0LpSe4YJiuBuOXzJX2NwK0b8ycvovCalmNcqivRgNxaICiQ7wCvhxkxoP1+7zdNjGdjERIOPzGiT68r2qh47D9SDHgipjwX9IGtlXwHBgWiNLcRs+NbhJeuB5enKcSXH1+MrpERVBoO/vBWVX59iXobaA9XC9YgyYOOmBHkX7Ajk/2CUA/ADqKpeAbIBW2lpUft2Ni+5bWkjDVe7DetjwSYU/Gj6FRFtU3jsMTNitSmnbK6e/5DcPc3odxwsLKUgZiXU8RahiYIkesCm042Uu+sdcJ7SvxFGF6EkJPbtMxWuLi+Nza6c+uuKSQuOOGyKTTUmQxNf+BZIchdZM5bWOr6aH2ISzoAl44Of/OlkXrZmhm1QS+OkIN8fbivkXxWhQXJE7H2jeswV5WLfpZ7dgY=
+  - secure: KOnFu91uxkxVpIgztouC6pHYYQBlbkifZ6vB3THU3RVh8DN5a2Q2jKJ9lqq5eDQn8csgNktDrAEXaSjVhychCXdAZelrk6LrTESeNG3pH60/fyxFvOuuJhE3lyTVMNL1uczJk4SShsUrJWKvO60GHh+ZGLDdcO/hq3K/RuQofMsmDeSiDlL/QW6eo2uoAD7JlSUvGdyJBpA0l0kMXvdLRhDoxQMjAUUKZQBt9wHPWiajqtDTlkLTV++mDsIzqZ+a98ZERtwoSSdUxWx4A4i3/UmhBL0YpHz0zCFD+3wYJODwTanQLpv2bbNBKyvRFvdSZqtzuTN/uIsxDlHUmtLGaO8QvASbTV29tNK5XFnUG80LpyLRysJVQPQqJhX4nH6zUrMuqc7mpF1XBcTTLnzhnmEYH0MuYSOdEQKAWfgXP2PmV6/F+lNcILgHv4DcX5yha0zCGnv3sKE3F3SeSYqzCtBrcISVLKyuPkO8qMdaGAeJPtdvknLrm4nNjXbBtEyrz145UkBh5uua/CXXrheDsKZudRRVjqTtbvYZ4nojqidb1H8a/v0yPixL+i/0z/RynRQ02h+VxESzA5Tv6CZOzjvkCPjY5DYq7KOPJNtoKbrD5+23Y5+UN6/Og6C8eef6mIirY+NE5qJxPUoNfA6FCFW0W1SSJpW4mme6e+a0n9w=
+  - secure: IMo6+b8kxTXhavolsJQDwWPm5rKZfadUJu6U0sG/prFWi+wzMXln5XpASiiHomzDKQ3XYp6jrn8nU66R/H2Usv2Q9U/ikLevTXY4UGGxbzCU8j/yCOSzzZyD5K6XlvhFmqZClAuVCw8CRyzXMuBbq9dmZqOg+c5axlcLXH+W6raYWsS8t/kZuzVtp4thWX/7vOToxR7wZr8zQ+w/v8khXs9rs69fIv1YDPx+I8+spheFXGDsyI2bM+ZOxMbQxNHWtpsQpde6XIfaHo6cBUgx7C8Z8dr2/x3xGrDQ7SVzGw865fuEEaGs9wYa5C212NIPAeeA2ZIoob2qK2C+CA6N2wByZ/bGWXTTF0VzNIoiVZfZZuI60Jxk4wboCM5Ivdk2jxyEIFwPDfduarGIeSnooJo6dVj2jye/l46yF6Dzkwv9ZgpkMKch7tF/eftsY/BwTM8m0nKYcVbwpT5M9bmrQZCzrJfYqLJfASsM8B0mxkFD2Owtwswdw2C4MhtvcGwvOpMn4Td/sMv+QODNnEn9/yQX4iOAqtTU3m8VhqOOHqzPN/UcjW/Ro5vcDmY232zZljUYdcYyOrphheJJ/iMwk0YlLz+rIEATNSOSb9aD4hTMtinHMXxxe5FyZiZ7Upk2vnuMogjbQ0hvEWAkXYh2DRlKwiiNyPi0+MHWF5kdb60=
 before_install:
-  - gem install travis -v 1.8.5 --no-rdoc --no-ri
-  - sudo curl -o /usr/local/bin/ecs-cli https://s3.amazonaws.com/amazon-ecs-cli/ecs-cli-linux-amd64-latest
-  - sudo chmod +x /usr/local/bin/ecs-cli
-  - export BUILD_NAME=chapter10-$TRAVIS_BRANCH-$(date -u "+%Y%m%d%H%M%S")-$TRAVIS_BUILD_NUMBER
-  - export CONTAINER_IP=54.193.36.218
-  - export PLATFORM_TEST_NAME="chapter10-platform-tests"
+- gem install travis -v 1.8.5 --no-rdoc --no-ri
+- sudo curl -o /usr/local/bin/ecs-cli https://s3.amazonaws.com/amazon-ecs-cli/ecs-cli-linux-amd64-latest
+- sudo chmod +x /usr/local/bin/ecs-cli
+- export BUILD_NAME=chapter10-$TRAVIS_BRANCH-$(date -u "+%Y%m%d%H%M%S")-$TRAVIS_BUILD_NUMBER
+- export CONTAINER_IP=54.193.36.218
+- export PLATFORM_TEST_NAME="chapter10-platform-tests"
 script:
-  - sh travis_scripts/tag_build.sh                        #Step 5 - Tagging the build
-  - sh travis_scripts/build_services.sh                   #Step 6 - Executing the maven scripts
-  - sh travis_scripts/deploy_to_docker_hub.sh             #Step 7 - Pushing the built images to Docker hub
-  - sh travis_scripts/deploy_to_amazon_ecs.sh             #Step 8 - Deploying the code to Amazons ECS service
-  #- sh travis_scripts/trigger_platform_tests.sh           #Step 9 - Triggering the platform tests
+- sh travis_scripts/tag_build.sh
+- sh travis_scripts/build_services.sh
+- sh travis_scripts/deploy_to_docker_hub.sh
+- sh travis_scripts/deploy_to_amazon_ecs.sh
