@@ -67,7 +67,6 @@ authenticationservice:
       EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
       ENCRYPT_KEY:       "IMSYMMETRIC"
 
-
 organizationservice:
     image: johncarnell/tmx-organization-service:${BUILD_NAME}
     mem_limit: 1073741824
