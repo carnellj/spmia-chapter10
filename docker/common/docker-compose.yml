@@ -49,6 +49,7 @@ licensingservice:
       KAFKASERVER_URI: "kafkaserver"
       ZKSERVER_URI: "kafkaserver"
       AUTHSERVER_URI:   "http://authenticationservice:8901/user"
+      ENCRYPT_KEY:       "IMSYMMETRIC"
 
 authenticationservice:
     image: johncarnell/tmx-authentication-service:${BUILD_NAME}
@@ -64,6 +65,7 @@ authenticationservice:
       SERVER_PORT: "8901"
       CONFIGSERVER_URI: "http://configserver:8888"
       EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+      ENCRYPT_KEY:       "IMSYMMETRIC"
 
 
 organizationservice:
@@ -85,6 +87,7 @@ organizationservice:
       KAFKASERVER_URI: "kafkaserver"
       ZKSERVER_URI: "kafkaserver"
       AUTHSERVER_URI:   "http://authenticationservice:8901/user"
+      ENCRYPT_KEY:       "IMSYMMETRIC"
 
 kafkaserver:
     image: spotify/kafka

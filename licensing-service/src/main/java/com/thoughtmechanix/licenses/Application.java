@@ -24,6 +24,9 @@ import org.springframework.integration.annotation.Poller;
 import org.springframework.integration.core.MessageSource;
 import org.springframework.messaging.support.GenericMessage;
 import org.springframework.messaging.support.MessageBuilder;
+import org.springframework.security.oauth2.client.OAuth2ClientContext;
+import org.springframework.security.oauth2.client.OAuth2RestTemplate;
+import org.springframework.security.oauth2.client.resource.OAuth2ProtectedResourceDetails;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.web.client.RestTemplate;
 import java.text.SimpleDateFormat;
@@ -43,6 +46,11 @@ public class Application {
 
     private static final Logger logger = LoggerFactory.getLogger(Application.class);
 
+    @Bean
+    public OAuth2RestTemplate oauth2RestTemplate(OAuth2ClientContext oauth2ClientContext,
+                                                 OAuth2ProtectedResourceDetails details) {
+        return new OAuth2RestTemplate(details, oauth2ClientContext);
+    }
 
     @Bean
     public JedisConnectionFactory jedisConnectionFactory() {
