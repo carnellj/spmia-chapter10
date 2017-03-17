@@ -27,7 +27,7 @@ Run the following maven command.  This command will execute the [Spotify docker 
 
    **mvn clean package docker:build**
 
-Running the above command at the root of the project directory will build all of the projects. If everything builds successfully you should see a message indicating that the build was successful.
+If everything builds successfully you should see a message indicating that the build was successful.
 
 # Running the services in Chapter 10
 
