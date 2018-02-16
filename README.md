@@ -32,7 +32,7 @@ If everything builds successfully you should see a message indicating that the b
 # Running the services in Chapter 10
 
 Now we are going to use docker-compose to start the actual image.  To start the docker image,
-change to the docker-compose directory in your chapter 10 source code.  Issue the following docker-compose command:
+change to the directory containing  your chapter 10 source code.  Issue the following docker-compose command:
 
    **docker-compose -f docker/common/docker-compose.yml up**
 
